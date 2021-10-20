@@ -1,0 +1,13 @@
+
+<p>Desplegable</p>
+<mat-form-field appearance="fill">
+    <mat-label>Elige un pokemon</mat-label>
+    <mat-select [(ngModel)]="pkmnName" (Change)="getPokemon()">
+        <mat-option  *ngFor="let pokemon of pokemonList" [value] = "pokemon.name">{{pokemon.name}}</mat-option>
+    
+    </mat-select>
+</mat-form-field>
+
+<ul>
+    <li>{{pkmnName}}</li>
+</ul>
